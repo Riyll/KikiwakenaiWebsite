@@ -1,0 +1,84 @@
+body { 
+    background-image:url('GalaxyApple.gif');
+    background-repeat:repeat; 
+    background-size: 100% 100%;
+}
+
+h1{
+    color: #ff0000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+}
+
+p1{
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2{
+    color: #fe0fdb;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+spotifyReminder{
+    color: #10e65e;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+buttonEnvironment{
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+button{
+    background-color: #ce0321; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#filsdeputeButton{
+    background-color: #ffffff; /* Green */
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+ColorSwitcher{
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+LyricsSection{
+    font-family:cursive;
+    color: #ffffff;
+    text-align: center;
+}
+
+

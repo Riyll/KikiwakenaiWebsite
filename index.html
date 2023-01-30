@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kikiwakenai</title>
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <h1>Kikiwakenai! <br> キキワケナイ! </h1>
+    <ColorSwitcher id="WhiteBlack">Click on the button to switch between dark and light modes.</ColorSwitcher>
+    <br>
+    <br>
+    <button id="lightButton">Dark</button>
+
+    <button id="filsdeputeButton">magic button </button>
+    
+
+    <script src="LightOnOff.js"> </script>
+
+    <h2> Welcome to Kikiwakenai listening website (offers the best listening experience for Kikiwakenai) </h2>
+    <spotifyReminder>
+        Please use Spotify to listen to Kikiwakenai. 
+        <a href="https://open.spotify.com/track/2NEO8wHt1JnfjkzCWzhQNa?si=d0ceb48007944467"><i class="fa fa-spotify"></i></a>
+    </spotifyReminder>
+    <p>This is for testing for now</p> 
+    
+    <h2>
+        <button id="playButton">Play</button>
+        <button id="pauseButton">Pause</button>
+        <button id="restartButton">Restart</button>
+        <input  id="volumeSlider" type="range" min="0" max="1" step="0.01" value="0.5">
+    </h2>
+
+    <script src="AudioManager.js">
+    </script>
+
+    <button id="LyricsToggler">Show Lyrics</button>
+
+    <br>
+    <section id="lyrics"></section>
+
+    <LyricsSection id="KikiLyricsBox"></LyricsSection>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+
+    var ObjLyrics;
+
+
+    $.ajax({
+        url: "KikiLyrics.json",
+        type: "GET",
+        async: false,
+        dataType: "json",
+        success: function(data) {
+            ObjLyrics =  data;
+        }
+    });
+        
+         
+    var ArrayLyrics = [];
+    var docFrag = document.querySelector("#KikiLyricsBox");
+
+    for (var i = 0; i < ObjLyrics.length; i++) {
+    (function (i) {
+        var timeSec = ObjLyrics[i].minute * 60 + ObjLyrics[i].second;
+        var elem = document.createElement('input');
+        elem.type = 'button';
+        elem.value = ObjLyrics[i].Line;
+        ArrayLyrics[i] = elem;
+        docFrag.appendChild(ArrayLyrics[i]);
+        ArrayLyrics[i].addEventListener("click", function () { audio.currentTime = timeSec; });
+        // break line
+        var br = document.createElement('br');
+        docFrag.appendChild(br);
+    })(i);
+    }
+
+     </script>
+
+     <script src="BoxHider.js"></script>
+    
+
+
+</body>
+
+</html>
