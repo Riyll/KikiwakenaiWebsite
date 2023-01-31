@@ -25,6 +25,8 @@ var gifButton = document.getElementById("filsdeputeButton");
                 gifOn = false;
             } else {
                 document.body.style.backgroundImage = "url('GalaxyApple.gif')";
+                document.body.style.backgroundRepeat = "no-repeat";
+                document.body.style.backgroundSize = "cover";
                 gifButton.innerHTML = "Fils de pute";
                 gifOn = true;
             }
