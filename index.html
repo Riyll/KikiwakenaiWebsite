@@ -51,6 +51,7 @@
     var ObjLyrics;
 
 
+    
     $.ajax({
         url: "KikiLyrics.json",
         type: "GET",
@@ -60,7 +61,8 @@
             ObjLyrics =  data;
         }
     });
-        
+
+            
          
     var ArrayLyrics = [];
     var docFrag = document.querySelector("#KikiLyricsBox");

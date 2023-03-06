@@ -4,23 +4,25 @@ var restartButton = document.getElementById("restartButton");
 
 var audio = new Audio('Kikiwakenai.mp3')
 
-playButton.addEventListener("click", function() {
-    audio.play();
-});
+function playAudio(audio, playButton, pauseButton, restartButton, volumeSlider) {
+    playButton.addEventListener("click", function() {
+        audio.play();
+    });
 
-pauseButton.addEventListener("click", function() {
-    audio.pause();
-});
+    pauseButton.addEventListener("click", function() {
+        audio.pause();
+    });
 
-restartButton.addEventListener("click", function() {
-    audio.currentTime = 0;
-});
+    restartButton.addEventListener("click", function() {
+        audio.currentTime = 0;
+    });
 
-//add a volume slider
-var volumeSlider = document.getElementById("volumeSlider");
-volumeSlider.addEventListener("change", function() {
-    audio.volume = volumeSlider.value;
-});
+    volumeSlider.addEventListener("change", function() {
+        audio.volume = volumeSlider.value;
+    });
+}
+
+playAudio(audio, playButton, pauseButton, restartButton, volumeSlider);
 
 
 

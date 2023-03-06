@@ -21,13 +21,13 @@ var gifButton = document.getElementById("filsdeputeButton");
         gifButton.onclick = function() {
             if (gifOn) {
                 document.body.style.backgroundImage = "url('')";
-                gifButton.innerHTML = "Fils de pute";
+                gifButton.innerHTML = ":(";
                 gifOn = false;
             } else {
                 document.body.style.backgroundImage = "url('GalaxyApple.gif')";
                 document.body.style.backgroundRepeat = "no-repeat";
                 document.body.style.backgroundSize = "cover";
-                gifButton.innerHTML = "Fils de pute";
+                gifButton.innerHTML = ":)";
                 gifOn = true;
             }
         }
